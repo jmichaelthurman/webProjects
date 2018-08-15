@@ -1,0 +1,152 @@
+body{
+  background-color: rgb(185,220,255);
+  
+}
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  align: center;
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "content content content content content sidebar"
+    "footer footer footer footer footer footer";
+  
+  grid-template-columns: 40px minmax(30px, 80px); 
+}
+.header {
+  background-color: rgba(161,150,133,0.8);
+ 
+  grid-area: header;
+  
+}
+.title_block {
+  text-align: center;
+  color: rgb(71,58,36)
+}
+#title {
+  
+}
+#subtitle {
+  
+}
+.content {
+  background-color: #fff;
+  grid-area: content;
+  padding: 20px 0px 0px 60px;
+}
+a {
+  color: black;
+}
+a:hover,
+a:focus {
+  color: #695635;
+}
+.main-text {
+  font-family: "Courier New", Courier, monospace;
+  width: 60%;
+  font-weight: 550;
+}
+
+.sidebar {
+  background-color: #695635;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-areas: 
+    "image"
+    "image"
+    "text"
+    "button"
+    "empty";
+  
+}
+#img-div {
+  grid-area: image;
+  justify-self: center;
+  justify-items: center;
+}
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  align: center;
+}
+
+#img-caption { 
+    color:  #B8AC98;
+  display: block;
+    text-align: center;
+    grid-area: image;
+  font-family: arial;
+  padding: 10px;
+    
+}
+#sidebar_text {
+  grid-area: text;
+  justify-self: center;
+  width: 80%;
+}
+#text{
+  padding: 5px;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #B8AC98;
+}
+
+button {
+    grid-area: button;
+    justify-self: center;
+    width: 60%;
+    height: 70%;
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #3F5B78;
+    color: #B8AC98;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+  overflow-wrap: break-word;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #B4D5F7;
+  color: #3B5570;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+/* Button styles end */
+#empty {
+  grid-area: empty;
+  height: 10px;
+}
+
+
+.footer {
+  /*background-color: #0000ff;*/
+  grid-area: footer;
+  padding: 5px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+}
+#copyright {
+  
+}
+#foot-1 {
+  
+}
