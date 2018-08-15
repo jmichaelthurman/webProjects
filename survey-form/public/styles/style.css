@@ -1,0 +1,12 @@
+body{
+    background-color: #fff;
+}
+
+#title {
+    color: green;
+    text-align: center;
+}
+
+#main {
+    display: grid;
+}

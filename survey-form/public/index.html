@@ -3,10 +3,57 @@
 <head>
     <meta charset="utf-8">
     <title>Survey <Form></Form></title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="main">
-        <h1>Hello!</h1>
+        <div id="header">
+            <h1 id="title">Survey Form</h1>
+        </div>
+        <div id="content">
+            <p id="description">
+                Some desctiptive text goes here.
+            </p>
+            <form id="survey-form" method="POST">
+            <fieldset id="info">
+                <legend id="info-legend">Enter your information:</legend>
+               <label id="name-label" for"name">* Name:</label>
+                <input id="name" type="text" name="name" required placeholder="Enter your name.">
+                <label id="email-label" for="email" >* E-mail:</label>
+                <input id="email" type="email" name="email" required placeholder="Enter valid E-mail address">
+                <label id="number-label" for="years" >* Number of years in your current position:</label>
+                <input id="number" type="number" name="years" required placeholder="YR?" min="1" max="40">
+                <label id="label">Which option best describes your current role?</label>
+                <select id="dropdown" required>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </fieldset>
+                <fieldset id="experience-group" data-role="experience-group" required>
+                    <legend id="experience-label">Which level of experience do you prefer when hiring new developers?</legend>
+                    <input id="radio" type="radio" for="beginner" name="experience" value="beginner"><label id="beginner">Beginner</label>
+                    <input id="radio" type="radio" for="intermediate" name="experience" value="intermediate" ><label id="intermediate">Intermediate</label>
+                    <input id="radio" type="radio" for="senior" name="experience" value="senior" ><label id="senior">Senior</label>
+                </fieldset>
+                <fieldset id="idea-list" data-role="idea-list">
+                    <legend id="idea-label">Which bright ideas resonate with you?</legend>
+                    <input id="checkbox" type="checkbox" for="bright-idea-1" name="ideas" value="bright-idea-1"><label id="bright-idea-1">Bright Idea 1</label>
+                    <input id="checkbox" type="checkbox" for="bright-idea-2" name="ideas" value="bright-idea-2"><label id="bright-idea-2">Bright Idea 2</label>
+                    <input id="checkbox" type="checkbox" for="bright-idea-3" name="ideas" value="bright-idea-3"><label id="bright-idea-3">Bright Idea 3</label>
+                    <input id="checkbox" type="checkbox" for="bright-idea-4" name="ideas" value="bright-idea-4"><label id="bright-idea-4">Bright Idea 4</label>
+                    <input id="checkbox" type="checkbox" for="bright-idea-5" name="ideas" value="bright-idea-5"><label id="bright-idea-5">Bright Idea 5</label>
+                    <input id="checkbox" type="checkbox" for="bright-idea-6" name="ideas" value="bright-idea-6"><label id="bright-idea-6">Bright Idea 6</label>
+                    <input id="checkbox" type="checkbox" for="bright-idea-7" name="ideas" value="bright-idea-7"><label id="bright-idea-7">Bright Idea 7</label>
+                </fieldset>
+                <fieldset id="comments">
+                    <label id="comments-label" for="comments-text-area">Comments?</label>
+                    <input id="comments-text-area" name="comments-text-area" type="text" maxlength="255">
+                </fieldset>
+                <input id="submit" type="submit" name="submit" >
+                <input id="reset" type="reset" name="reset">
+            </form>
+        </div>
 
     </div>
 </body>
