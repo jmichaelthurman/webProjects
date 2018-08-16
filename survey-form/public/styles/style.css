@@ -3,7 +3,7 @@
 
 html,
 body {
-    background-color: rgba(130,79,0,0.5);
+    background-color: rgba(130,79,0);
   /* text-align: center; */
   font-family: 'Raleway', Helvetica, sans-serif;
 
@@ -349,4 +349,12 @@ legend {
 #footer {
     grid-area: footer; 
    text-align: center;
+}
+
+#submit-thank-you {
+    text-align: center;
+    font-weight: 700;
+    margin: 40px auto;
+    padding: 100px;
+   font-size: x-large;
 }
