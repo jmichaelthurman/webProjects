@@ -19,12 +19,13 @@
                 <legend id="info-legend info-label">Tell us a little more about you:</legend>
                     <label id="name-label" class="info-label" for="name">* Name:</label>
                     <input id="name" class="info" type="text" name="name" required placeholder="Enter your name.">
-                    <label id="email-label" class="info-label" for="email" >* E-mail:</label>
-                    <input id="email" class="info" type="email" name="email" required placeholder="Enter valid E-mail address">
+                    <label id="email-label" class="info-label" for="email"  >* E-mail:</label>
+                    <input id="email" class="info" type="email" name="email" required placeholder="Enter valid E-mail address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                     <label id="number-label" class="info-label" for="years" >* Number of years in your current position:</label>
                     <input id="number" class="info" type="number" name="years" required placeholder="Enter years as a whole number." min="1" max="40">
                 <label id="label" class="role label">* Which option best describes your current role?</label>
-                <select id="dropdown" class="role ddl" name="role"required>
+                <select id="dropdown" class="role ddl" name="role" required>
+                    <option value="" selected disabled hidden>Choose an option</option>
                     <option value="CIO/CTO">CIO / CTO </option>
                     <option value="Director">Director</option>
                     <option value="Manager">Manager</option>
@@ -32,7 +33,7 @@
             
             </div>
             <div id="experience-group" data-role="experience-group" required>
-                    <legend id="experience-label">* Which level of experience do you prefer when hiring new developers?</legend>
+                    <legend id="experience-label">Which level of experience do you prefer when hiring new developers?</legend>
                     <input id="radio" class="beginner" type="radio" for="beginner" name="experience" value="beginner"><label id="beginner">Beginner</label>
                     <input id="radio" class="intermediate" type="radio" for="intermediate" name="experience" value="intermediate" ><label id="intermediate">Intermediate</label>
                     <input id="radio" class="senior" type="radio" for="senior" name="experience" value="senior" ><label id="senior">Senior</label>
