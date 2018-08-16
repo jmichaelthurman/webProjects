@@ -28,10 +28,7 @@ app.use(express.static(__dirname + '/public'));
 // Route handlers
 
 app.post('/', urlencodedParser, function (req,res) {
-    res.send({
-      status:'OK',
-      status_code: '200'
-    })
+    res.sendFile(__dirname +'/public'+'/thank-you.html');
     console.log(req.body);
     });
 
