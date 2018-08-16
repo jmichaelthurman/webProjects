@@ -1,12 +1,347 @@
-body{
-    background-color: #fff;
-}
 
-#title {
-    color: green;
-    text-align: center;
-}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 
+html,
+body {
+    background-color: rgba(130,79,0,0.5);
+  /* text-align: center; */
+  font-family: 'Raleway', Helvetica, sans-serif;
+
+}
+legend {
+    font-weight: bold;
+}
 #main {
+    justify-self: center;
+    max-width: 960px;
+    min-width: 320px;
+    width: 75%;
+    margin: 0 auto;
     display: grid;
+    grid-template-areas:
+    "header header header header header header"
+    "content content content content content content"
+    "footer footer footer footer footer footer";
+  justify-items: center;
+  grid-template-columns: 160px minmax(50px 160px) ; 
+    grid-column-gap: 5px;
+}
+
+#header {
+    color:  rgb(252, 252, 250);
+    text-align: center;
+    grid-area: header;
+}
+#content {
+   max-width: 960px;
+   min-width: 320px;
+    background-color: #A4D6FF;
+    grid-area: content;
+    display: grid;
+    grid-template-areas: 
+    "description description description description description description" 
+    "survey-form survey-form survey-form survey-form survey-form survey-form";
+    
+    grid-template-columns: 160px minmax(50px 160px) ; 
+    grid-column-gap: 5px;
+   
+}
+#description{
+    grid-area: description;
+    text-align: justify;
+    justify-self: center;
+    max-width: 65%;
+}
+#survey-form {
+    max-width: 960px;
+    min-width: 320px;
+
+    grid-area: survey-form;
+    display: grid;
+     grid-template-columns: repeat(6, 18%); 
+    grid-column-gap: 2px;
+    /* grid-template-rows: 6fr 5fr 9fr 4fr 2fr; */
+    grid-template-rows: auto;
+    grid-template-areas:
+        "info-group info-group info-group info-group info-group info-group "
+        "experience-group experience-group experience-group experience-group experience-group experience-group"
+        "idea-list idea-list idea-list idea-list idea-list idea-list idea-list"
+        "comments comments comments comments comments comments"
+        "buttons"; 
+    justify-items: center;
+    
+}
+
+#info-group {
+    grid-area: info-group;
+    grid-column: 2 / 6;
+    grid-row: 1 / 2 ;
+    display: grid;
+    grid-template-areas: 
+        "info-legend marco-polo"
+        "name-label name-info"
+        "email-label email-info"
+        "years-label years-info"
+        "role-label role-ddl";
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows:  repeat(6, 1fr);
+  
+    
+} 
+ #info-legend{
+    grid-area: info-legend;
+    grid-column: 1/2;
+    grid-row: 1 / 2;
+  
+}
+#name-label.info-label{
+    grid-area: name-label;
+    text-align: right;
+    padding: 5px 5px 0 5px;
+}
+#email-label.info-label {
+    grid-area: email-label;
+    text-align: right;
+    padding: 5px 5px 0 5px;
+}
+
+#number-label.info-label {
+    grid-area: years-label;
+    text-align: right;
+    padding: 5px 5px 0 5px;
+}
+.info{
+    padding: 5px;
+    margin: 5px;
+}
+#name.info {
+    grid-area: name-info;
+}
+#email.info {
+    grid-area: email-info;
+}
+
+#number.info {
+    grid-area: years-info;
+}
+
+#label.role.label {
+    grid-area: role-label;
+    word-wrap: break-word;
+    text-align: right;
+    padding: 5px 5px 0 5px;
+}
+
+#dropdown.role.ddl {
+    grid-area: role-ddl;
+    height: 100%;
+    margin: 5px;
+}
+
+#experience-group {
+    grid-area: experience-group;
+    grid-row: 2 / 3;
+    grid-column: 2 / 6;
+    display: grid;
+    grid-template-areas: 
+       "exp-label1 exp-label"
+        "exp-one-one exp-one-two"
+       "exp-two-one exp-two-two"
+       "exp-three-one exp-three-two";
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows:  repeat(4, 1fr);
+    
+}
+
+#experience-label {
+    grid-area: exp-label1;
+    /* text-align: justify; */
+    /* max-width: 300px; */
+}
+#radio {
+    margin: 5px;
+}
+#beginner {
+    grid-area: exp-one-one;
+    text-align: right;
+}
+#radio.beginner {
+    grid-area: exp-one-two;
+}
+#intermediate {
+    grid-area: exp-two-one;
+    text-align: right;
+}
+#radio.intermediate {
+    grid-area: exp-two-two;
+}
+#senior {
+    grid-area: exp-three-one;
+    text-align: right;
+}
+#radio.senior {
+    grid-area: exp-three-two;
+}
+
+#idea-list {
+    grid-area: idea-list;
+    grid-column: 2 / 6;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-areas: 
+    "checkbox-header1 checkbox-header"
+    "checkbox-label1 checkbox1"
+    "checkbox-label2 checkbox2"
+    "checkbox-label3 checkbox3"
+    "checkbox-label4 checkbox4"
+    "checkbox-label5 checkbox5"
+    "checkbox-label6 checkbox6"
+    "checkbox-label7 checkbox7"
+    "checkbox-label8 checkbox8";
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(2,48%);
+    
+}
+#checkbox{
+    margin: 5px;
+}
+#idea-label {
+    grid-area: checkbox-header1;
+}
+#checkbox-1{
+    grid-area: checkbox-label1;
+    text-align: right;
+}
+#checkbox.a {
+    grid-area: checkbox1;
+    
+}
+#checkbox-2{
+    grid-area: checkbox-label2;
+    text-align: right;
+}
+#checkbox.b {
+    grid-area: checkbox2;
+}
+#checkbox-3{
+    grid-area: checkbox-label3;
+    text-align: right;
+}
+#checkbox.c {
+    grid-area: checkbox3;
+}
+#checkbox-4{
+    grid-area: checkbox-label4;
+    text-align: right;
+}
+#checkbox.d {
+    grid-area: checkbox4;
+}
+#checkbox-5{
+    grid-area: checkbox-label5;
+    text-align: right;
+}
+#checkbox.e {
+    grid-area: checkbox5;
+}
+#checkbox-6{
+    grid-area: checkbox-label6;
+    text-align: right;
+}
+#checkbox.f {
+    grid-area: checkbox6;
+}
+#checkbox.g {
+    grid-area: checkbox7;
+}
+#checkbox-7{
+    grid-area: checkbox-label7;
+    text-align: right;
+}
+
+
+#comments {
+    grid-area: comments;
+    grid-column: 2 / 6;
+    grid-row: 4 / 5;
+    display: grid;
+    grid-template-areas: 
+        "comment-header comment-header"
+        "comment-label comment-box"
+        "blank-row blank-row";
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: repeat(2,50%);
+  
+}
+#comments-legend{
+    grid-area: comment-header;
+}
+#comments-label {
+    grid-area: comment-label;
+}
+#comments-text-area {
+    grid-area: comment-box;
+    min-width: 180px;
+}
+#buttons {
+    grid-area: buttons;
+    grid-column: 2 / 6;
+    grid-row: 5 /  6;
+    display: grid;
+    grid-template-areas: 
+        "submit reset";
+    grid-template-rows: 2fr;
+    grid-template-columns: repeat(2,48%);
+    margin: 5px;
+}
+#submit {
+    grid-area: submit;
+    
+}
+#reset {
+    grid-area: reset;
+   
+}
+.button {
+    grid-area: button;
+    justify-self: center;
+    width:98%;
+    height: auto;
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #D18E28;
+    color: #523100;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+  overflow-wrap: break-word;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.button:hover,
+.button:focus {
+  background: #B4D5F7;
+  color: #3B5570;
+}
+
+.button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.button:active {
+    transform: scale(0.99);
+}
+/* Button styles end */
+
+#footer {
+    grid-area: footer; 
+   text-align: center;
 }

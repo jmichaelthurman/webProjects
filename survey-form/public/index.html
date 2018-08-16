@@ -12,49 +12,53 @@
         </div>
         <div id="content">
             <p id="description">
-                Some desctiptive text goes here.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <form id="survey-form" method="POST">
-            <fieldset id="info">
-                <legend id="info-legend">Enter your information:</legend>
-               <label id="name-label" for"name">* Name:</label>
-                <input id="name" type="text" name="name" required placeholder="Enter your name.">
-                <label id="email-label" for="email" >* E-mail:</label>
-                <input id="email" type="email" name="email" required placeholder="Enter valid E-mail address">
-                <label id="number-label" for="years" >* Number of years in your current position:</label>
-                <input id="number" type="number" name="years" required placeholder="YR?" min="1" max="40">
-                <label id="label">Which option best describes your current role?</label>
-                <select id="dropdown" required>
+            <div id="info-group" class="info-group">
+                <legend id="info-legend info-label">Tell us a little more about you:</legend>
+                    <label id="name-label" class="info-label" for="name">* Name:</label>
+                    <input id="name" class="info" type="text" name="name" required placeholder="Enter your name.">
+                    <label id="email-label" class="info-label" for="email" >* E-mail:</label>
+                    <input id="email" class="info" type="email" name="email" required placeholder="Enter valid E-mail address">
+                    <label id="number-label" class="info-label" for="years" >* Number of years in your current position:</label>
+                    <input id="number" class="info" type="number" name="years" required placeholder="YR?" min="1" max="40">
+                <label id="label" class="role label">Which option best describes your current role?</label>
+                <select id="dropdown" class="role ddl" required>
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="green">Green</option>
                 </select>
-            </fieldset>
-                <fieldset id="experience-group" data-role="experience-group" required>
+            
+            </div>
+            <div id="experience-group" data-role="experience-group" required>
                     <legend id="experience-label">Which level of experience do you prefer when hiring new developers?</legend>
-                    <input id="radio" type="radio" for="beginner" name="experience" value="beginner"><label id="beginner">Beginner</label>
-                    <input id="radio" type="radio" for="intermediate" name="experience" value="intermediate" ><label id="intermediate">Intermediate</label>
-                    <input id="radio" type="radio" for="senior" name="experience" value="senior" ><label id="senior">Senior</label>
-                </fieldset>
-                <fieldset id="idea-list" data-role="idea-list">
+                    <input id="radio" class="beginner" type="radio" for="beginner" name="experience" value="beginner"><label id="beginner">Beginner</label>
+                    <input id="radio" class="intermediate" type="radio" for="intermediate" name="experience" value="intermediate" ><label id="intermediate">Intermediate</label>
+                    <input id="radio" class="senior" type="radio" for="senior" name="experience" value="senior" ><label id="senior">Senior</label>
+            </div>
+            <div id="idea-list" data-role="idea-list">
                     <legend id="idea-label">Which bright ideas resonate with you?</legend>
-                    <input id="checkbox" type="checkbox" for="bright-idea-1" name="ideas" value="bright-idea-1"><label id="bright-idea-1">Bright Idea 1</label>
-                    <input id="checkbox" type="checkbox" for="bright-idea-2" name="ideas" value="bright-idea-2"><label id="bright-idea-2">Bright Idea 2</label>
-                    <input id="checkbox" type="checkbox" for="bright-idea-3" name="ideas" value="bright-idea-3"><label id="bright-idea-3">Bright Idea 3</label>
-                    <input id="checkbox" type="checkbox" for="bright-idea-4" name="ideas" value="bright-idea-4"><label id="bright-idea-4">Bright Idea 4</label>
-                    <input id="checkbox" type="checkbox" for="bright-idea-5" name="ideas" value="bright-idea-5"><label id="bright-idea-5">Bright Idea 5</label>
-                    <input id="checkbox" type="checkbox" for="bright-idea-6" name="ideas" value="bright-idea-6"><label id="bright-idea-6">Bright Idea 6</label>
-                    <input id="checkbox" type="checkbox" for="bright-idea-7" name="ideas" value="bright-idea-7"><label id="bright-idea-7">Bright Idea 7</label>
-                </fieldset>
-                <fieldset id="comments">
-                    <label id="comments-label" for="comments-text-area">Comments?</label>
+                    <input id="checkbox" class="a" type="checkbox" for="bright-idea-1" name="ideas" value="bright-idea-1"><label id="checkbox-1">Fewer Less-Experienced Devs</label>
+                    <input id="checkbox" class="b" type="checkbox" for="bright-idea-2" name="ideas" value="bright-idea-2"><label id="checkbox-2">A viable mix of experience levels.</label>
+                    <input id="checkbox" class="c" type="checkbox" for="bright-idea-3" name="ideas" value="bright-idea-3"><label id="checkbox-3">Agile / Scrum</label>
+                    <input id="checkbox" class="d" type="checkbox" for="bright-idea-4" name="ideas" value="bright-idea-4"><label id="checkbox-4">More frequent small releases.</label>
+                    <input id="checkbox" class="e" type="checkbox" for="bright-idea-5" name="ideas" value="bright-idea-5"><label id="checkbox-5">Large waterfall releases.</label>
+                    <input id="checkbox" class="f" type="checkbox" for="bright-idea-6" name="ideas" value="bright-idea-6"><label id="checkbox-6">No realease artifacts.</label>
+                    <input id="checkbox" class="g" type="checkbox" for="bright-idea-7" name="ideas" value="bright-idea-7"><label id="checkbox-7">Release artifacts / candidates for everything.</label>
+            </div>
+                <div id="comments" class="comments-group">
+                    <legend id="comments-legend">Comments</legend>
+                    <label id="comments-label" for="comments-text-area">At XYZ, Inc., we want to know <em>your</em> thoughts on the typs of employees and ideas you value. Please, take a moment and write a few words of your own. </label>
                     <input id="comments-text-area" name="comments-text-area" type="text" maxlength="255">
-                </fieldset>
-                <input id="submit" type="submit" name="submit" >
-                <input id="reset" type="reset" name="reset">
+                </div>
+                <div id="buttons">
+                <input id="submit" class="button" type="submit" name="submit" >
+                <input id="reset" class="button" type="reset" name="reset">
+                </div>
             </form>
         </div>
-
-    </div>
+        <footer id='footer'>MIT License. 2018.</footer>
+    </div> 
 </body>
 </html>
