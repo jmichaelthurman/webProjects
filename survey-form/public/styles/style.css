@@ -208,6 +208,11 @@ legend {
 #idea-label {
     grid-area: checkbox-header1;
 }
+#idea-label.note {
+    grid-area: checkbox-header;
+    font-size: 80%;
+    font-weight: thin;
+}
 #checkbox-1{
     grid-area: checkbox-label1;
     text-align: right;
