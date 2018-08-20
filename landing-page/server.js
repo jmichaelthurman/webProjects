@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 const bodyParser = require('body-parser');
 
 let app = express();
@@ -6,21 +7,38 @@ let app = express();
 const port = process.env.PORT || 3000;
 
 let urlencodedParser = bodyParser.urlencoded({extended: false});
+
 let jsonParser = bodyParser.json();
 
-app.use((req, res, next) => {
-    let now = new Date().toString();
-    let log = `${now}: ${req.ip} ${req.method} ${req.url}`
+app.use((req,res, next) =>{
+    var now = new Date().toString();
+    var log = `${now}: ${req.ip} ${req.method} ${req.method} ${req.url} ${req.protocol}`
 
     console.log(log);
+    fs.appendFile('server.log',log + '\n', (err)=>{
+        if(err){
+        console.log('Unable to write to server.log.');
+      }
+      });
+      next();
 });
 
 app.use(express.static(__dirname + '/public'));
 
-// Route Handlers
+// Route handlers
 
-app.get('/', (req, res) => {
-    res.render('landing-page.html')
+app.post('/', urlencodedParser, function (req,res) {
+    res.sendFile(__dirname +'/public'+'/thank-you.html');
+    console.log(req.body);
+    });
 
-});
-
+app.get('/bad',(req,res)=>{
+    res.send({
+      status: 'Bad Request',
+      status_code: 400,
+      errorMessage: 'Unable to process bad request(400).'
+    })
+  })
+  app.listen(port,()=>{
+    console.log(`Server is listening on port ${port}`)
+  });
