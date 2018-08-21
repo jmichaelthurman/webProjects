@@ -9,24 +9,18 @@
     <script src="scripts/main.js"></script>
 </head>
 <body>
+    <div id="content">
     <div id="header">
-        <img id="header-img" src="images/logo.png">
+        
         <nav id="nav-bar">
             <a class="nav-link" href="#benefits">Benefits</a>
             <a class="nav-link" href="#demo">In Action</a>
-            <a class="nav-link" href="#pricing">Pricing</a>
+            <a class="nav-link" href="#pricing">Learn More</a>
         </nav>
-        
+        <img id="header-img" src="images/logo.png">
         <h1 id="title">What Flexible Technology Solutions Does Your Company Need?</h1>
     </div>
-    <div id="form-container-1">
-        <section id="hero">
-            <form id="form">
-                <input id="email" name="email" type="email" placeholder="Enter your best E-mail here." pattern="">
-                <input id="submit" type="submit">
-            </form>
-        </section>
-    </div>
+ 
     <div id="usp-container-1">
         <section id="benefits">
             <div class="section-header">
@@ -64,30 +58,42 @@
     <div id="video">
         <section id="demo">
             <div class="video-container"> 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kXpWLv2o7hs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/kXpWLv2o7hs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div> 
         </section>
     </div>
-    <div id="form-container-2">
-            <form id="form">
-                <input id="email" name="email" type="email" placeholder="Enter your best E-mail here." pattern="">
-                <input id="submit" class="md-button-ripple" type="submit">
+    <div id="form-2">
+            <form id="form" class="form-container-2">
+                <div class="form-2">
+                <p>To schedule a free initial consultation, complete this form:</p>
+                <label id="name" class="label name" for="name">Enter your name:</label>
+                <input id="name"  class="name field" name="name" type="text" placeholder="Enter your name." pattern="">
+                <label id="email" class="label email" for="email">Enter your best e-mail:</label>
+                <input id="email"  class="email field" name="email" type="email" placeholder="Enter your best E-mail here." pattern="">
+                <input id="submit" class="button" type="submit">
+            </div>
             </form>
         </div>
-    <div id="usp-container-2">
         <section id="pricing">
-            <div>
+        <div id="usp-container-2">
+        
+            <div id="offer-1" class="cta">
                 <h4>Reliable</h4>
+                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
             </div>
-            <div>
+            <div id="offer-2" class="cta">
                 <h4>Profitable</h4>
+                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
             </div>
-            <div>
+            <div id="offer-3" class="cta">
                 <h4>Secure</h4>
+                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
             </div>
-        </section>
-    </div>
+        
+        </div>
+    </section>
     <div id="footer">2018. Cloudbrook LLC.</div>
+    </div>
 </body>
 </html>
 
