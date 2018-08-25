@@ -186,6 +186,7 @@ label {
     height: 100%;
    
 }
+.form-1,
 .form-2{
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -368,6 +369,7 @@ label {
         grid-template-areas:
         "header"
         "usp1"
+        "form1"
         "demo"
         "usp2"
         "form"
@@ -495,6 +497,9 @@ input#submit,
     /* max-width: 140px; */
     width: 80%;
 }
+.form-1 {
+    grid-area: form1;
+}
 
 #demo-video {
     grid-area: demo;
@@ -570,6 +575,7 @@ input#submit,
     border: solid;
     border-width: 1px;
 }
+.form-1,
 .form-2 {
     grid-area: form;
     display: grid;
@@ -578,7 +584,7 @@ input#submit,
     "fields"
     "button";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .form-title {
     grid-area: head;
@@ -600,6 +606,7 @@ input#submit,
 .email-container {
     grid-area: input2;
 }
+.form1-button,
 .form2-button {
     grid-area: button;
     height: 4rem;
