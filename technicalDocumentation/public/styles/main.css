@@ -1,9 +1,90 @@
+/* Text Styles */
+
+h1{
+    font-size: calc(90%+1vw);
+}
+h2{
+    font-size: calc(80%+1vw);
+}
+h3{
+    font-size: calc(70%+1vw);
+}
+h4{
+    font-size: calc(60%+1vw);
+}
+p{
+    font-size: calc(50%+1vw);
+}
+
+
 /* Base Style for max-width 550px */
 
-
-
-
-
+body {
+    background-color: #eee;
+    color: #555;
+    word-wrap: break-word; /* force long words to break */
+    overflow-wrap: break-word; /* newer syntax standard that replaces word-wrap */
+    width: 90%;
+    min-width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  main {
+     
+      display: grid;
+      grid-template-areas:
+        "navbar"
+        "article"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+  }
+  #navbar {
+      /* position: fixed; */
+      grid-area: navbar;
+  }
+  article {
+      grid-area: article;
+  }
+  footer {
+      grid-area: footer;
+  }
+  pre {
+    font-family: monospace;
+    background-color: #fff;
+    width: em(440);
+    min-width: 400px;
+    margin: 4em auto;
+    padding: 0.5em;
+    border-radius: .25em;
+    box-shadow: .1em .1em .5em rgba(0,0,0,.45);
+    line-height: 0;
+    counter-reset: line;
+    border-left-style: solid;
+    border-left-color: #555;
+  }
+    span {
+      display: block;
+      line-height: 1.5rem;
+    }
+    span:before {
+        counter-increment: line;
+        content: counter(line);
+        display: inline-block;
+        border-right: 1px solid #ddd;
+        padding: 0 .5em;
+        margin-right: .5em;
+        color: #888
+      }
+      code,
+      pre,
+      span {
+        font: 400 .8125em/1.4375, 'Menlo', 'Consolas', 'DejaVu Sans Mono' monospace;
+        white-space: pre-wrap; /* force long lines to break */
+      }
+    
+  
 /* Style for min-width 550px */
 @media screen and (min-width: 550px) {
     #navbar {
