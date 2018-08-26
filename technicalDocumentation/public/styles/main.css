@@ -36,22 +36,6 @@ li {
         grid-template-columns: 1fr;
         grid-template-rows: 100% 100%;
     }
-    /* #navbar>ul>li:hover,
-    #navbar>ul>li:focus,
-    #navbar>ul>li>a:hover,
-    #navbar>ul>l#navbar>ul {
-        padding-left: 0px;
-        list-style-type: none;
-        width: 100%;
-        text-align: center;
-        background-color: #AFAF9B;
-        grid-area: menu;
-        display: grid;
-        grid-template-areas: "a" "a" "a" "a" "a" "a";
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(6, 3rem);
-        grid-gap: 0px;
-        align-items: center;}*/
 
 ul.nav {
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -205,7 +189,7 @@ span {
         grid-template-columns: 1fr;
         grid-template-rows: auto;        
     }
-   header.title {
+    header.title {
         grid-area: t;
         grid-row-start: 1;
         grid-column-start: 1;
@@ -214,6 +198,12 @@ span {
         margin-top: 0;
         width: 100%;
         text-align: center;
+     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1; /* Stay on top */
+        top: 80px; /* Stay at the top */
+        left: 0;
+        width: 25%;
+        max-width: 260px;
         
     }
     ul.nav {
@@ -225,12 +215,10 @@ span {
         text-align: center;
         position: fixed; /* Fixed Sidebar (stay in place on scroll) */
         z-index: 1; /* Stay on top */
-        top: 250px; /* Stay at the top */
+        top: 200px; /* Stay at the top */
         left: 0;
         width: 25%;
-        max-width: 280px;
-
-      
+        max-width: 260px;
        
         align-items: center;
     }
@@ -265,17 +253,7 @@ span {
         transition: none;
         -webkit-appearance: none;
         -moz-appearance: none;
-        /* background: #40B5FF; */
-        /* background: rgb(217, 229, 246);
     
-    
-    cursor: pointer;
-    text-align: center;
-    align-content: center;
-    overflow-wrap: break-word;
-    transition: background 250ms ease-in-out, transform 150ms ease;
-    -webkit-appearance: none;
-    -moz-appearance: none;  */
     }
 
     #navbar>ul>li:hover,
