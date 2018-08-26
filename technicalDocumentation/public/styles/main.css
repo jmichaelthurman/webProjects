@@ -1,0 +1,12 @@
+/* Base Style for max-width 550px */
+
+
+
+
+
+/* Style for min-width 550px */
+@media screen and (min-width: 550px) {
+    #navbar {
+        gird-area: left;
+    }
+}
